@@ -1,0 +1,9 @@
+syntax="v1"
+info(
+	title:"public api"
+	version:"1.0"
+)
+type Resp {
+	Code    uint
+	Message string
+}

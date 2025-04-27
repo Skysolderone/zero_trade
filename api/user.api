@@ -1,0 +1,41 @@
+syntax = "v1"
+
+info (
+	title:   "User API"
+	version: "1.0"
+)
+
+import "public.api"
+
+type LoginReq {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+type LoginResp {
+	Code  int
+	Msg   string
+	Token string
+}
+
+service user-api {
+	@handler login
+	post /user/login (LoginReq) returns (LoginResp)
+
+	@handler register
+	post /user/register (LoginReq) returns (Resp)
+}
+
+type UserInfo {
+	Username string
+	Password string
+	Email    string
+}
+
+@server (
+	jwt: Auth
+)
+service user-api {
+	@handler info
+	get /user/info returns (UserInfo)
+}
