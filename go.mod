@@ -5,6 +5,7 @@ go 1.24.2
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/redis/go-redis/v9 v9.7.3
+	github.com/rs/cors v1.11.1
 	github.com/uptrace/bun v1.2.11
 	github.com/zeromicro/go-zero v1.8.2
 	google.golang.org/grpc v1.65.0

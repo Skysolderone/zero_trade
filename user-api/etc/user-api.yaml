@@ -8,8 +8,14 @@ UserRpc:
     Key: user.rpc
 Auth:
   Enable: true
- 
   AccessSecret: wws123456
   Secret: wws123456
   AccessExpire: 86400
+Middlewares:
+  Recover: true
+  Breaker: true
+  Timeout: true
+  Trace: true
+  Shedding: true
+
     
